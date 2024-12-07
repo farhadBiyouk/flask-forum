@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+{% include  'errors_form.html' %}
+<h1>Register form</h1>
+    <form action="" method="post">
+        {{form.csrf_token}}
+        {{form.username.label(class="form-control-label")}} {{form.username(class="form-control")}}<br>
+        {{form.email.label(class="form-control-label")}} {{form.email(class="form-control")}}<br>
+        {{form.phone_number.label(class="form-control-label")}} {{form.phone_number(class="form-control")}}<br><br>
+        <button class="btn btn-info" type="submit">register</button>
+    </form>
+{% endblock %}
